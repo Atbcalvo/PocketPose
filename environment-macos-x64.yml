@@ -1,9 +1,15 @@
-name: posekit_x64
-channels: [conda-forge, schrodinger]
+name: posekit
+channels:
+  - conda-forge
+  - bioconda
+  - schrodinger
 dependencies:
   - python=3.10
   - rdkit
-  - pymol-bundle
+  - pymol-open-source
+  - fpocket
+  - apbs
+  - pdb2pqr
   - pip
   - pip:
       - PyQt5
