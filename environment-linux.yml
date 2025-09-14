@@ -4,6 +4,9 @@ dependencies:
   - python=3.10
   - rdkit
   - pymol-open-source
+  - fpocket
+  - apbs
+  - pdb2pqr
   - pip
   - pip:
       - PyQt5
