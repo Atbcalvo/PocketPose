@@ -1,0 +1,3 @@
+rdkit-pypi
+pymol-open-source
+PyQt5
