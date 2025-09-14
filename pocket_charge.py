@@ -5,6 +5,13 @@ A tiny CLI that measures pocket volume with fpocket and computes electrostatics 
 Inputs: a pocket-aligned receptor PDB (and optional ligand SDF).
 Outputs: an ESP-colored PyMOL session (*_esp.pse), a high-res PNG, the APBS map (*_pot.dx), and the fpocket results folder.
 Open the .pse in PyMOL to explore interactively; or load the .dx and apply a blue-white-red ramp if you prefer.
+
+arch -x86_64 env PYTHONNOUSERSITE=1 QT_QPA_PLATFORM=offscreen \
+python pocket_charge.py \
+  --receptor /Users/atbcalvo/Hansen/Athe_0181/Athe_0181_3VXC_AG3_receptor.pdb \
+  --ligand   /Users/atbcalvo/Hansen/Athe_0181/Athe_0181_3VXC_AG3_ligand_overlaid.sdf \
+  --out      /Users/atbcalvo/Hansen/Charges/Athe_0181_3VXC_charge \
+  --pH 7.0 --ff AMBER
 """
 
 import os, sys, argparse, subprocess, shutil, re, json
