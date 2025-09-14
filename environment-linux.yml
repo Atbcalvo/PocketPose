@@ -1,0 +1,9 @@
+name: posekit
+channels: [conda-forge]
+dependencies:
+  - python=3.10
+  - rdkit
+  - pymol-open-source
+  - pip
+  - pip:
+      - PyQt5
