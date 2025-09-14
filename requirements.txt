@@ -1,3 +1,6 @@
 rdkit-pypi
 pymol-open-source
 PyQt5
+fpocket
+apbs
+pdb2pqr
