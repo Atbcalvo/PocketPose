@@ -227,8 +227,10 @@ def rdkit_overlay_and_minimize(template_lig_sdf, input_lig_sdf, out_ligand_sdf, 
     except Exception:
         pass
 
-    prbH = Chem.RemoveHs(prbH)
-    Chem.MolToMolFile(prbH, out_ligand_sdf)
+    # --- Keep explicit hydrogens for ROSIE ---
+    w = Chem.SDWriter(out_ligand_sdf)
+    w.write(prbH)   # prbH already has explicit H and 3D coords
+    w.close()
 
     return (float(rms) if rms is not None else None), int(n_mcs)
 
