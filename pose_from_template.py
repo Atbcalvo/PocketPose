@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-pose_from_template.py
+pose_from_template.py (global alignment)
 
 Usage:
   python pose_from_template.py --template 4G68.pdb --af Athe_0174_4G68.pdb --ligand xylotetraose.sdf --out Athe_0174_4G68_xtetra
